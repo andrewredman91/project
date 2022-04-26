@@ -1,0 +1,43 @@
+body {
+    background-image: url('grass.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    color: aliceblue;
+    font-size: 80px;
+}
+
+.menu {
+    color:aliceblue;
+    align-items: center;
+}
+
+a {
+    color: aliceblue;
+    align-self: center;
+}
+
+h2{
+    text-align: center;
+    color: aliceblue;
+}
+
+div{
+    text-align: center;
+}
+
+.home_team{
+    color: aliceblue;
+}
+
+.team{
+    color: aliceblue;
+}
+
+.match {
+    color: aliceblue;
+}

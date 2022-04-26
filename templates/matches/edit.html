@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Update a match</h2>
+
+<form action="/matches/{{ match.id }}" method="POST">
+    <div>
+        <label for="home_team">home_team:</label>
+        <select name="home_team" id="home_team">
+            {% for home_team in teams %}
+            <option value="{{ home_team.id }}" {% if home_team.id == match.home_team.id %} selected {% endif %}>
+                {{ home_team.name }}
+            </option>
+            {% endfor %}
+        </select>
+        <label for="quantity"></label>
+            <input type="number" id="quantity" name="home_score" min="0" max="9">
+    </div>
+    <div>
+        <label for="away_team">team:</label>
+        <select name="away_team" id="away_team">
+            {% for away_team in teams %}
+            <option value="{{ away_team.id }}" {% if away_team.id == match.away_team.id %} selected {% endif %}>
+                {{ away_team.name }}
+            </option>
+            {% endfor %}
+        </select>
+        <label for="quantity"></label>
+            <input type="number" id="quantity" name="away_score" min="0" max="9">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}

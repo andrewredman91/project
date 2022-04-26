@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>matches</h2>
+
+{% for match in matches %}
+
+<section class="match">
+    <p>{{ match.home_team.name}}, {{match.home_score }} v {{ match.away_team.name}}, {{match.away_score }}</p>
+    <a href="/matches/{{ match.id }}/edit">Edit</a>
+    <form action="/matches/{{ match.id }}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+</section>
+
+{% endfor %}
+{% endblock %}

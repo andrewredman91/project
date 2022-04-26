@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Matches Scorings</title>
+</head>
+<body>
+    <header>
+        <h1>Andrew's Super Scorings</h1>
+        
+            <div class="dropdown">
+
+                
+                <div class="dropdown">
+                    <button class="dropbtn">Teams</button>
+                    <div class="dropdown-content">
+                      <a href="/home_teams">View Teams</a>
+                      <a href="/home_teams/new">Add Team</a>
+                      <button class="dropbtn">Matches</button>
+                    <div class="dropdown-content">
+                      <a href="/matches">View Matches</a>
+                      <a href="/matches/new">Add Match</a>
+
+                    </div>
+
+            
+            </div>
+
+                
+            </ul>
+
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

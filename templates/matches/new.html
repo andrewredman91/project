@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Add a New match</h2>
+
+<form action="/matches" method="POST">
+    <div>
+        <label for="home_team">home_team:</label>
+        <select name="home_team_id" id="home_team">
+            {% for home_team in home_teams %}
+            <option value="{{ home_team.id }}">
+                {{ home_team.name }}
+    
+            </option>
+
+            {% endfor %}
+        </select>
+            <label for="quantity"></label>
+            <input type="number" id="quantity" name="home_score" min="0" max="9">
+         </div>
+    <div>
+        <label for="team">team:</label>
+        <select name="team_id" id="team">
+            {% for away_team in teams %}
+            <option value="{{ away_team.id }}">
+                {{ away_team.name }}
+        
+            </option>
+            {% endfor %}
+        </select>
+        <label for="quantity"></label>
+        <input type="number" id="quantity" name="away_score" min="0" max="9">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}
