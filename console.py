@@ -26,13 +26,12 @@ team_repository.save(team_4)
 match_1 = Match(team_2, team_3, 1, 0)
 match_repository.save(match_1)
 
-match_2 = Match(home_team_3, team_1, 3, 2)
+match_2 = Match(team_3, team_1, 3, 2)
 match_repository.save(match_2)
 
-match_3 = Match(home_team_3, team_2, 0, 2)
+match_3 = Match(team_3, team_2, 0, 2)
 match_repository.save(match_3)
 
-match_4 = Match(home_team_4, team_2, 0, 1)
+match_4 = Match(team_4, team_2, 0, 1)
 match_repository.save(match_4)
-
 

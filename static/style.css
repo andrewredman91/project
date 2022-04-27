@@ -9,9 +9,22 @@ h1{
     text-align: center;
     color: aliceblue;
     font-size: 80px;
+    font-family: Chalkduster, fantasy;
 }
-
-.menu {
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1px;
+  }
+  .grid-item {
+    border: 0px solid rgba(0, 0, 0, 0.8);
+    padding: 10;
+    font-size: 30px;
+    font-family: Chalkduster, fantasy;
+    text-align: center;
+    color: aliceblue;
+  }
+ .menu {
     color:aliceblue;
     align-items: center;
 }
@@ -24,10 +37,13 @@ a {
 h2{
     text-align: center;
     color: aliceblue;
+    font-family: Chalkduster, fantasy;
+    font-size:50px;
 }
 
 div{
     text-align: center;
+    color: aliceblue;
 }
 
 .home_team{
@@ -40,4 +56,12 @@ div{
 
 .match {
     color: aliceblue;
+    font-size: x-large;
 }
+
+/* .tg  {border-collapse:collapse;border-spacing:10px;margin-left: auto;margin-right: auto;}
+.tg td{border-color:black;border-width:1px;font-family:Chalkduster, fantasy;font-size:20px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-width:1px;font-family:Chalkduster, fantasy;font-size:20px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:center;vertical-align:top} */ */
