@@ -23,8 +23,8 @@ def select(id):
     sql = "SELECT * FROM teams WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    teams = Team(result["name"], result["id"])
-    return teams
+    team = Team(result["name"], result["id"])
+    return team
 
 
 def delete_all():

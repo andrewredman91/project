@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Add a New match</h2>
+<h2>Match Day &#9917;</h2>
 
 <form action="/matches" method="POST">
     <div>
-        <label for="home_team">home_team:</label>
+        <label for="home_team">Home Team:</label>
         <select name="home_team_id" id="home_team">
             {% for home_team in home_teams %}
             <option value="{{ home_team.id }}">
@@ -17,9 +17,9 @@
         </select>
             <label for="quantity"></label>
             <input type="number" id="quantity" name="home_score" min="0" max="9">
-         </div>
+        </div>
     <div>
-        <label for="team">team:</label>
+        <label for="team">Awaw Team:</label>
         <select name="team_id" id="team">
             {% for away_team in teams %}
             <option value="{{ away_team.id }}">

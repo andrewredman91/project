@@ -15,16 +15,17 @@ h1{
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 1px;
-  }
-  .grid-item {
+    font-size: 25px;
+}
+.grid-item {
     border: 0px solid rgba(0, 0, 0, 0.8);
     padding: 10;
     font-size: 30px;
     font-family: Chalkduster, fantasy;
-    text-align: center;
     color: aliceblue;
-  }
- .menu {
+}
+
+.menu {
     color:aliceblue;
     align-items: center;
 }
@@ -41,7 +42,7 @@ h2{
     font-size:50px;
 }
 
-div{
+#mane{
     text-align: center;
     color: aliceblue;
 }
@@ -65,3 +66,28 @@ div{
 .tg th{border-color:black;border-width:1px;font-family:Chalkduster, fantasy;font-size:20px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-0pky{border-color:inherit;text-align:center;vertical-align:top} */ */
+
+
+
+.item1 {
+    text-align: right;
+    color: aliceblue;
+    width : 200px;
+}
+
+#boop3{
+    text-align: left;
+    text-indent: 20%;
+    color: aliceblue;
+    width : 200px;
+}
+
+#boop{
+    text-align: center;
+    color: aliceblue;
+    width : 200px;
+}
+
+
+  
+  

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>League</h2>
+
+{% for league in leagues %}
+
+<div class="grid-container">
+    <div class="item1">{{league.position}}</div>
+    <div id="boop" class="item2">{{league.team.name}}                   </div>
+    <div id="boop3" class="item3">{{league.points}}pts </div>  
+</div>
+
+
+{% endfor %}
+{% endblock %}

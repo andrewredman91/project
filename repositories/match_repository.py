@@ -1,12 +1,28 @@
 from db.run_sql import run_sql
 from models.match import Match
 import repositories.team_repository as team_repository
+import repositories.league_repository as league_repository
 
 def save(match):
     print(match.__dict__)
     sql = "INSERT INTO matches (home_team_id, away_team_id, home_score, away_score) VALUES (%s, %s, %s, %s) RETURNING id"
     values = [match.home_team.id, match.away_team.id, match.home_score, match.away_score]
     results = run_sql(sql, values)
+    #insert/update into league here 
+    home_points = 0
+    away_points = 0
+    if match.home_score > match.away_score :
+        home_points = 3
+        away_points = 0
+    elif match.home_score == match.away_score:
+        home_points = 1
+        away_points = 1
+    else:    
+        home_points = 0
+        away_points = 3
+
+
+    league_repository.update(match.home_team.id, match.away_team.id, home_points, away_points)
     print(results)
     id = results[0]['id']
     match.id = id

@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS matches;
-DROP TABLE IF EXISTS home_teams;
+DROP TABLE IF EXISTS league;
 DROP TABLE IF EXISTS teams;
 
 
@@ -16,5 +16,11 @@ CREATE TABLE matches (
     away_team_id INT REFERENCES teams(id),
     home_score INT,
     away_score INT 
-    
 );
+
+CREATE TABLE league (
+    id serial PRIMARY KEY,
+    position INT DEFAULT 1,
+    team_id INT REFERENCES teams(id) ,
+    points INT
+)
