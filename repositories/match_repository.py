@@ -1,3 +1,4 @@
+from importlib_metadata import always_iterable
 from db.run_sql import run_sql
 from models.match import Match
 import repositories.team_repository as team_repository
